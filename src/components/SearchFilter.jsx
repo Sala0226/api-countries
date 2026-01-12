@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const SearchFilter = ({ search, setSearch, region, setRegion }) => {
   return (
     <div className="row mb-4 align-items-center">
@@ -26,6 +27,11 @@ const SearchFilter = ({ search, setSearch, region, setRegion }) => {
           <option value="Europe">Europe</option>
           <option value="Oceania">Oceania</option>
         </select>
+     
+            <Link to="/favorites" className="btn btn-white shadow mt-3">
+              ⭐ Voir les pays favoris
+            </Link>
+       
       </div>
     </div>
   );

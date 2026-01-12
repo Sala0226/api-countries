@@ -13,7 +13,12 @@ const CountryCard = ({ country }) => {
   };
 
   return (
-    <div className="card h-100">
+    <div className="card h-100"><Link
+            to={`/country/${country.name.common}`}
+            className="text-decoration-none text-dark"
+          >
+            
+         
       <img
         src={country.flags.png}
         className="card-img-top"
@@ -21,9 +26,10 @@ const CountryCard = ({ country }) => {
       />
 
       <div className="card-body d-flex flex-column">
-        <h5 className="card-title">{country.name.common}</h5>
-        <p className="card-text">🌍 {country.region}</p>
-
+        <h5 className="card-title lh-sm mb-4">{country.name.common}</h5>
+        <p className="card-text"><span className="fw-bold fs-small">Population:</span> {country.population}</p>
+        <p className="card-text"><span className="fw-bold fs-small">Region:</span> {country.region}</p>
+        <p className="card-text"><span className="fw-bold fs-small">Capital:</span> {country.capital}</p>
         <div className="mt-auto d-flex justify-content-between">
           <Link
             to={`/country/${country.name.common}`}
@@ -32,16 +38,9 @@ const CountryCard = ({ country }) => {
             Détails
           </Link>
 
-          <button
-            onClick={toggleFavorite}
-            className={`btn btn-sm ${
-              favorite ? "btn-warning" : "btn-outline-warning"
-            }`}
-          >
-            ⭐
-          </button>
+
         </div>
-      </div>
+      </div> </Link>
     </div>
   );
 };

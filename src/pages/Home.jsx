@@ -60,7 +60,7 @@ const Home = () => {
         ))}
       </div>
 
-      <Link to="/favorites" className="btn btn-outline-dark">
+      <Link to="/favorites" className="btn btn-outline-dark mt-3">
         ⭐ Voir les pays favoris
       </Link>
 

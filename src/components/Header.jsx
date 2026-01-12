@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { IoMoonOutline, IoMoon } from "react-icons/io5";
@@ -29,9 +28,7 @@ const Header = () => {
           )}
         </button>
 
-        <Link to="/favorites" className="btn btn-warning">
-          ⭐ Favoris
-        </Link>
+       
       </div>
     </nav>
   );

@@ -1,10 +1,12 @@
 import { useFavorites } from "../context/FavoritesContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+
 
 const Favorites = () => {
   const { favorites } = useFavorites();
   const [region, setRegion] = useState("All");
+  const navigate = useNavigate();
 
   const regions = ["All", "Africa", "Americas", "Asia", "Europe", "Oceania"];
 
@@ -15,6 +17,9 @@ const Favorites = () => {
 
   return (
     <div className="container py-5">
+      <button onClick={() => navigate(-1)} className="btn btn-light shadow-sm mb-5">
+        ← Back
+      </button>
       <h3 className="text-center mb-4">🌍 Pays Favoris</h3>
 
       {/* Filtre continent */}
